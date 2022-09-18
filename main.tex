@@ -13,16 +13,20 @@
 \usepackage{textcomp}
 \usepackage{parskip}
 \usepackage[indonesian]{babel}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\usepackage{csquotes}
 
 \addto\captionsindonesian{%
   \renewcommand{\abstractname}{Abstrak}%
 }
 
+\DeclareLanguageMapping{indonesian}{bahasa}
 
 \title{Topic Modeling dengan Latent Dirichlet Allocation pada Judul Berita Berbahasa Indonesia}
 \author{Qori El-Hafizh}
 \date{\today}
 
+\bibliography{topic_modeling}
 \begin{document}
 
 \maketitle
@@ -34,6 +38,7 @@
 
 \chapter{Pendahuluan}
 \section{Latar Belakang Masalah}
+Topic modeling adalah \cite{surjandari_mining_2018}
 \section{Rumusan Masalah}
 \section{Batasan Masalah}
 \section{Tujuan Penelitian}
@@ -48,5 +53,7 @@
 \section{Prosedur pengambilan data}
 \section{Analisis Data}
 \section{Metode}
+
+\printbibliography
 
 \end{document}
