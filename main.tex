@@ -15,9 +15,19 @@
 \usepackage[indonesian]{babel}
 \usepackage[backend=bibtex,style=ieee]{biblatex}
 \usepackage{csquotes}
+\usepackage[explicit]{titlesec}
 
-\addto\captionsindonesian{%
-  \renewcommand{\abstractname}{Abstrak}%
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+\titleformat{\chapter}[display]
+{\normalfont\Large\bfseries\centering}
+{\MakeUppercase{\chaptertitlename}  \thechapter}
+{0.5em}
+{\MakeUppercase{#1}}
+
+\addto\captionsindonesian{
+  \renewcommand{\abstractname}{Abstraksi}
 }
 
 \DeclareLanguageMapping{indonesian}{bahasa}
@@ -49,7 +59,7 @@ Topic modeling adalah \cite{surjandari_mining_2018}
 \section{Tinjauan Pustaka}
 \section{Kerangka Pemikiran}
 
-\chapter{Metode Penelitian}
+\chapter{METODE PENELITIAN}
 \section{Prosedur pengambilan data}
 \section{Analisis Data}
 \section{Metode}
