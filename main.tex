@@ -21,15 +21,19 @@
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 
-\titleformat{\chapter}[display]
-{\normalfont\Large\bfseries\centering}
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries\centering}
 {\MakeUppercase{\chaptertitlename}  \thechapter}
-{0.5em}
+{0em}
 {\MakeUppercase{#1}}
+
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{0em}{ #1}
 
 \addto\captionsindonesian{
   \renewcommand{\abstractname}{Abstraksi}
 }
+
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
 
 \DeclareLanguageMapping{indonesian}{bahasa}
 
@@ -54,6 +58,9 @@ Menurut Kemenkominfo saat ini terdapat 100 portal berita daring yang telah terve
 Dari banyaknya portal berita online yang ada muncullah kebutuhan untuk mengetahui topik berita yang dikonsumsi masyarakat.
 Hal ini dapat berguna untuk aplikasi pengumpul berita, jurnalis, hingga pembuat kebijakan.
 \section{Rumusan Masalah}
+\begin{enumerate}
+    \item Bagaimana akurasi LDA untuk clustering judul berita?
+\end{enumerate}
 \section{Batasan Masalah}
 \section{Tujuan Penelitian}
 \section{Manfaat Penelitian}
